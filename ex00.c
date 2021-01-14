@@ -11,7 +11,7 @@ static void cthulhu_initializer(cthulhu_t *octopus)
 {
     octopus->m_name = "Cthulhu";
     octopus->m_power = 42;
-    printf("––––\n");
+    printf("----\n");
     printf("Building %s\n", octopus->m_name);
 }
 
