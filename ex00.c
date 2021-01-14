@@ -45,7 +45,7 @@ void attack(cthulhu_t *octopus)
         octopus->m_power -= 42;
     }
     else
-        printf("%s can’t attack, he doesn’t have enough power\n", octopus->m_name);
+        printf("%s can’t attack, he doesn't have enough power\n", octopus->m_name);
 }
 
 void sleeping(cthulhu_t *octopus)
