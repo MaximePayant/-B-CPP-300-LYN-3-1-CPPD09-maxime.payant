@@ -29,6 +29,7 @@ int Character::CloseAttack()
     }
     else if (Range == AttackRange::RANGE)
         return (0);
+    m_energy -= 10;
     std::cout << m_name << " strikes with a wooden stick" << std::endl;
     return (10 + m_strength);
 }
@@ -39,6 +40,7 @@ int Character::RangeAttack()
         std::cout << m_name << " out of power" << std::endl;
         return (0);
     }
+    m_energy -= 10;
     std::cout << m_name << " tosses a stone" << std::endl;
     return (5 + m_strength);
 }
@@ -67,9 +69,4 @@ void Character::TakeDamage(int damage)
             << std::endl;
     else
         std::cout << m_name << " out of combat" << std::endl;
-}
-
-int main()
-{
-    return (0);
 }
