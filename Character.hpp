@@ -14,8 +14,7 @@ class Character
 {
 
     public:
-        typedef enum {CLOSE, RANGE} AttackRange;
-        static AttackRange Range;
+        enum AttackRange {CLOSE, RANGE} Range;
 
         Character() = delete;
         Character(const Character&) = delete;
@@ -34,6 +33,14 @@ class Character
         int getIntelligence() const { return (m_intelligence); };
         int getSpirit() const       { return (m_spirit);       };
         int getAgility() const      { return (m_agility);      };
+
+        void setPv(int value)           { m_hp = (value > 100 ? 100 : value);};
+        void setPower(int value)        { m_energy = (value > 100 ? 100 : value);};
+        void setStrength(int value)     { m_strength = value;     };
+        void setStamina(int value)      { m_stamina = value;      };
+        void setIntelligence(int value) { m_intelligence = value; };
+        void setSpirit(int value)       { m_spirit = value;       };
+        void setAgility(int value)      { m_agility = value;      };
 
         int CloseAttack();
         int RangeAttack();

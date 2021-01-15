@@ -25,14 +25,14 @@ m_weapon(weapon)
         << std::endl;
 }
 
-int Warrior::RangeAttack()
+int Warrior::CloseAttack()
 {
-    if (Range == RANGE)
-        return (0);
-    else if (m_energy < 30) {
+    if (m_energy < 30) {
         std::cout << m_name << " out of power" << std::endl;
         return (0);
     }
+    if (Range == RANGE)
+        return (0);
     m_energy -= 30;
     std::cout
         << m_name
@@ -42,14 +42,14 @@ int Warrior::RangeAttack()
     return (20 + m_strength);
 }
 
-int Warrior::CloseAttack()
+int Warrior::RangeAttack()
 {
-    if (Range == CLOSE)
-        return (0);
     if (m_energy < 10) {
         std::cout << m_name << " out of power" << std::endl;
         return (0);
     }
+    if (Range == CLOSE)
+        return (0);
     Range = CLOSE;
     m_energy -= 10;
     std::cout << m_name << " intercepts" << std::endl;

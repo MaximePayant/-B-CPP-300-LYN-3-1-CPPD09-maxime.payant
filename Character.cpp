@@ -7,9 +7,8 @@
 
 #include "Character.hpp"
 
-Character::AttackRange Character::Range = AttackRange::CLOSE;
-
 Character::Character(const std::string& name, int level) :
+Range(CLOSE),
 m_name(name),
 m_level(level),
 m_hp(100),
@@ -28,7 +27,7 @@ m_agility(5)
 
 int Character::CloseAttack()
 {
-    if (Range == AttackRange::RANGE)
+    if (Range == RANGE)
         return (0);
     else if (m_energy < 10) {
         std::cout << m_name << " out of power" << std::endl;

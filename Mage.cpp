@@ -22,12 +22,12 @@ Character(name, level)
 
 int Mage::CloseAttack()
 {
-    if (Range == RANGE)
-        return (0);
-    else if (m_energy < 10) {
+    if (m_energy < 10) {
         std::cout << m_name << " out of power" << std::endl;
         return (0);
     }
+    if (Range == RANGE)
+        return (0);
     m_energy -= 10;
     Range = RANGE;
     std::cout << m_name << " blinks" << std::endl;
