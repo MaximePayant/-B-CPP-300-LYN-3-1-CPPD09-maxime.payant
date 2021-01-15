@@ -10,7 +10,8 @@
 
 #include "Character.hpp"
 
-class Warrior : virtual public Character
+class Warrior :
+    virtual public Character
 {
 
     private:
@@ -18,10 +19,12 @@ class Warrior : virtual public Character
 
     public:
         Warrior(const std::string&name, int level, const std::string& weapon = "hammer");
-        ~Warrior();
 
-        int closeAttack();
-        int rangeAttack();
+        int CloseAttack();
+        int RangeAttack();
+        using Character::Heal;
+        using Character::RestorePower;
+        using Character::TakeDamage;
 
 };
 
