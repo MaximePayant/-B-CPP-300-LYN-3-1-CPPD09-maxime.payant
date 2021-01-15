@@ -19,7 +19,12 @@ m_stamina(5),
 m_intelligence(5),
 m_spirit(5),
 m_agility(5)
-{}
+{
+    std::cout
+        << m_name
+        << " Created"
+        << std::endl;
+}
 
 int Character::CloseAttack()
 {
