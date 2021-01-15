@@ -23,12 +23,12 @@ m_agility(5)
 
 int Character::CloseAttack()
 {
-    if (m_energy < 10) {
+    if (Range == AttackRange::RANGE)
+        return (0);
+    else if (m_energy < 10) {
         std::cout << m_name << " out of power" << std::endl;
         return (0);
     }
-    else if (Range == AttackRange::RANGE)
-        return (0);
     m_energy -= 10;
     std::cout << m_name << " strikes with a wooden stick" << std::endl;
     return (10 + m_strength);
