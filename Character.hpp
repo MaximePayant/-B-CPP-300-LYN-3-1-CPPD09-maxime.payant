@@ -35,11 +35,11 @@ class Character
         int getSpirit() const       { return (m_spirit);       };
         int getAgility() const      { return (m_agility);      };
 
-        virtual int CloseAttack();
-        virtual int RangeAttack();
-        virtual void Heal();
-        virtual void RestorePower();
-        virtual void TakeDamage(int damage);
+        int CloseAttack();
+        int RangeAttack();
+        void Heal();
+        void RestorePower();
+        void TakeDamage(int damage);
 
     protected:
         std::string m_name;
